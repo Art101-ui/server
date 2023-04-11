@@ -1,7 +1,7 @@
 // const express = require('express')
 // const app = express();
 // const cors = require('cors')
-// const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 // require('dotenv').config();
 
 
@@ -137,14 +137,14 @@ export default async (req,res)=>{
             try {
                 const info = await transporter.sendMail(mailOptions);
                 console.log('Email Sent' + info.response)
-                res.send('success');
+                
             } catch (error) {
                 console.log(error);
-                res.send('error')
+                
                 
             }
 
-     res.send({status:"Email Sent"})
+            res.status(200).json({message:"Email Sent"})
        
     }
 }
