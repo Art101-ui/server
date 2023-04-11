@@ -6,17 +6,14 @@ require('dotenv').config();
  
 app.use(cors());
 
-
-
+app.get('/',(req,res)=>{
+    res.send({status:"Welcome to Nodemailer API"})
+})
 
 app.post('/',cors(),async (req,res)=>{
 //     res.setHeader('Access-Control-Allow-Credentials', true)
 //   res.setHeader('Access-Control-Allow-Origin', '*')
-
-    if(req.method == 'GET'){
-        res.send({status:"Welcome to Nodemailer API"})
-
-    }else{
+    
         let config={
             host: 'smtpout.secureserver.net',
       port: 587,
@@ -70,7 +67,7 @@ app.post('/',cors(),async (req,res)=>{
 
             res.status(200).json({message:"Email Sent"})
        
-    }
+    
 })
 
 
