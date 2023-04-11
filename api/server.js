@@ -2,7 +2,7 @@
 // const app = express();
 // const cors = require('cors')
 const nodemailer = require('nodemailer');
-// require('dotenv').config();
+require('dotenv').config();
 
 
 // const PORT = process.env.PORT || 5000
@@ -100,11 +100,11 @@ export default async (req,res)=>{
      
        tls:{},
             auth:{
-                user: "info@zara-space.co.uk",
-                pass:"D=gM3h$9=k"
+                // user: "info@zara-space.co.uk",
+                // pass:"D=gM3h$9=k"
                 
-                // user: process.env.EMAIL, // generated ethereal user
-                // pass: process.env.PASSWORD, 
+                user: process.env.EMAIL, // generated ethereal user
+                pass: process.env.PASSWORD, 
                 
             }
         }
@@ -123,8 +123,8 @@ export default async (req,res)=>{
         `
     
         const mailOptions = {
-            from: "info@zara-space.co.uk",
-            // `${process.env.EMAIL}`,
+            from: `${process.env.EMAIL}`,
+            // ,
             to:'obadmus912@gmail.com',
             subject:` ${req.body.subject}`,
             html:mailbody,
