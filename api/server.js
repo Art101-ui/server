@@ -10,7 +10,7 @@ app.use(cors());
 
 const allowCors = fn => async(req,res)=>{
     res.setHeader('Access-Control-Allow-Credentials', true)
-    res.setHeader('Access-Control-Allow-Origin', 'https://www.zara-space.co.uk/sendmail')
+    res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,POST')
         if(req.method == 'GET'){
             res.send({status:"Welcome to Nodemailer API"})
