@@ -40,7 +40,7 @@ const allowCors = fn => async(req,res)=>{
         
             const mailOptions = {
                 from: `${process.env.EMAIL}`,
-                to:'obadmus912@gmail.com',
+                to:'zara.angels.fit@gmail.com',
                 subject:` ${req.body.subject}`,
                 html:mailbody,
                 
