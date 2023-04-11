@@ -1,12 +1,13 @@
-// const express = require('express')
+// 
 // const app = express();
 // const cors = require('cors')
 const nodemailer = require('nodemailer');
-var cors = require('cors')
+var cors = require('cors');
+var express = require('express');
 var app = express()
 require('dotenv').config();
  
-app.use(cors())
+app.use(cors());
 
 
 // const PORT = process.env.PORT || 5000
