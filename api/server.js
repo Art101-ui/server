@@ -89,12 +89,6 @@ require('dotenv').config();
 // pass:'kvowmiaahpwvwzff'
 
 export default async (req,res)=>{
-
-    res.setHeader('Access-Control-Allow-Credentials', true)
-    res.setHeader('Access-Control-Allow-Origin', '*')
-   
-    
-
     if(req.method == 'GET'){
         res.send({status:"Welcome to Nodemailer API"})
 
