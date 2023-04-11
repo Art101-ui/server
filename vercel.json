@@ -1,14 +1,18 @@
 {
+
+   
     "routes":[
         {
             "src":"/",
+            "dest":"api/server.js"
+        },
+        {
+            "src":"/sendmail",
             "methods":[
                 "POST",
                 "GET"
             ],
             "dest":"api/server.js"
         }
-       
     ]
 }
-
