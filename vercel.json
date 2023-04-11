@@ -10,7 +10,8 @@
             "src":"/sendmail",
             "methods":[
                 "POST",
-                "GET"
+                "GET",
+                "OPTIONS"
             ],
             "dest":"api/server.js"
         }
