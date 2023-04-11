@@ -15,7 +15,7 @@ const allowCors = fn => async(req,res)=>{
         if(req.method == 'GET'){
             res.send({status:"Welcome to Nodemailer API"})
 
-        }else{
+        }else if(req.method == 'POST'){
             let config={
                 host: 'smtpout.secureserver.net',
         port: 587,
@@ -69,6 +69,9 @@ const allowCors = fn => async(req,res)=>{
 
                 res.status(200).json({message:"Email Sent"})
         
+        }
+        else{
+            res.send({status:"Not Allowed"})
         }
 }
 
